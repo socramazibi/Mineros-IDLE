@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    background-color: #4a752c;
+    border: 4px solid #2c4a1b;
+}
+
+.ui-container {
+    display: flex;
+    width: 800px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.inventory {
+    background-color: #2c4a1b;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.upgrades {
+    background-color: #2c4a1b;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.upgrade-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #4a752c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a8534;
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.stats {
+    background-color: #2c4a1b;
+    padding: 10px;
+    border-radius: 5px;
+    width: 35%;
+}
+
+.stat {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#inventoryItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.inventory-item {
+    width: 40px;
+    height: 40px;
+    background-color: #4a752c;
+    border: 2px solid #6a9541;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inventory-item:hover {
+    background-color: #5a8534;
+}
+
+.start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #4a752c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.start-button:hover {
+    background-color: #5a8534;
+}
+
+.mineral-prices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.mineral-price {
+    padding: 5px;
+    background-color: #4a752c;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.game-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.control-button {
+    background-color: #2c4a1b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control-button:hover {
+    background-color: #3c5a2b;
+}
+
+.speed-controls {
+    display: flex;
+    background-color: #2c4a1b;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.speed-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.speed-button:hover {
+    background-color: #3c5a2b;
+}
+
+.speed-button.active {
+    background-color: #4a752c;
+} 

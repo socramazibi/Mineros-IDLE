@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineros del Bosque - Juego Idle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <button id="startButton" class="start-button">¡Comenzar Juego!</button>
+        
+        <div class="game-controls">
+            <button id="pauseButton" class="control-button">⏸️ Pausa</button>
+            <div class="speed-controls">
+                <button id="speed1" class="speed-button active">x1</button>
+                <button id="speed2" class="speed-button">x2</button>
+                <button id="speed3" class="speed-button">x3</button>
+            </div>
+        </div>
+        
+        <div class="ui-container">
+            <div class="inventory">
+                <h3>Economía</h3>
+                <div class="stats">
+                    <div class="stat">Dinero: <span id="money">0</span> monedas</div>
+                </div>
+                <h3>Precios de Minerales</h3>
+                <div class="mineral-prices">
+                    <div class="mineral-price">Oro: <span id="goldPrice">2</span></div>
+                    <div class="mineral-price">Piedra: <span id="stonePrice">2</span></div>
+                    <div class="mineral-price">Madera: <span id="woodPrice">2</span></div>
+                    <div class="mineral-price">Rubí: <span id="rubyPrice">4</span></div>
+                    <div class="mineral-price">Esmeralda: <span id="emeraldPrice">6</span></div>
+                    <div class="mineral-price">Zafiro: <span id="sapphirePrice">8</span></div>
+                    <div class="mineral-price">Diamante: <span id="diamondPrice">10</span></div>
+                    <div class="mineral-price">Platino: <span id="platinumPrice">12</span></div>
+                    <div class="mineral-price">Uranio: <span id="uraniumPrice">14</span></div>
+                    <div class="mineral-price">Obsidiana: <span id="obsidianPrice">16</span></div>
+                </div>
+            </div>
+            <div class="upgrades">
+                <h3>Mineros</h3>
+                <div class="upgrade-item">
+                    <span>Mineros: <span id="totalMiners">0</span></span>
+                    <button id="buyMiner">Comprar (<span id="minerPrice">10</span> monedas)</button>
+                </div>
+                
+                <h3>Mejoras de Mineros</h3>
+                <div class="upgrade-item">
+                    <span>Velocidad de Perforación: <span id="miningSpeedPercent">100</span>%</span>
+                    <button id="upgradeMiningSpeed">Mejorar (<span id="miningSpeedPrice">20</span> monedas)</button>
+                </div>
+                <div class="upgrade-item">
+                    <span>Capacidad de Carga: <span id="carryCapacityUnits">2</span> unidades</span>
+                    <button id="upgradeCarryCapacity">Mejorar (<span id="carryCapacityPrice">25</span> monedas)</button>
+                </div>
+                <div class="upgrade-item">
+                    <span>Velocidad de Movimiento: <span id="moveSpeedPercent">100</span>%</span>
+                    <button id="upgradeMoveSpeed">Mejorar (<span id="moveSpeedPrice">15</span> monedas)</button>
+                </div>
+                <div class="upgrade-item">
+                    <span>Velocidad de Carga: <span id="loadSpeedPercent">100</span>%</span>
+                    <button id="upgradeLoadSpeed">Mejorar (<span id="loadSpeedPrice">30</span> monedas)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
